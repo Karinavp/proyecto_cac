@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>SIGN UP</title>
+            <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+            <link rel="stylesheet" href="../css/estilos.css">
+        </head>
+        <body class="bodyRL">
+            <header class="headerRL">
+                    <a href="../index.html">
+                        <img src="../assets/img/LogoMetalfanWhite.png" alt="Logo de Metalfan" loading="lazy">
+                    </a>
+            </header>
+            <main class="mainRL">
+                <section class="rlSection">
+                    <form class="rlForm" action="" method="get"><!--para que la informacion viaje segura va post-->
+                        <h1 class="rlTitle">CREATE AN ACOUNT</h1>
+                        <hr>
+                        <p>required*</p>
+                        <div>
+                            <input type="text" placeholder="First Name" name="firstname" id="firstname"  required>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Name" name="lastname" id="lastname"  required>
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email" name="email" id="email"  required>
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Password" name="password" id="password"  required>
+                        </div>
+                        <div>
+                            <input type="date" placeholder="Date of Birth" name="birth" id="birth" placeholder="Date of birth" required>
+                        <div/>
+                        <div>
+                            <select name="country" id="country">
+                                <option value="0">Argentina</option>
+                                <option value="1">Bolivia</option>
+                                <option value="2">Brazil</option>
+                                <option value="3">Chile</option>
+                                <option value="4">Colombia</option>
+                                <option value="5">Ecuador</option>
+                                <option value="6">Paraguay</option>
+                                <option value="7">Peru</option>
+                                <option value="8">Uruguay</option>
+                                <option value="9">Venezuela</option>
+                            </select>
+                        </div>
+                        <div class="terms">
+                            <input class="check" type="checkbox" name="terms" id="terms">
+                            <label class="checkText" for ="terms">I ACCEPT TERMS AND CONDITIONS</label>
+                        </div>
+                        <div>
+                            <input class= "buttonRL" type="submit" value="JOIN NOW">
+                        </div>
+                        <div>
+                            <a class="account" href="../pages/iniciosesion.html">DO YOU HAVE AN ACCOUNT? - <b>GO TO LOGIN</b></a>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </body>
+    </html>

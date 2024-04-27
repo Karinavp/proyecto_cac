@@ -1,0 +1,1296 @@
+/*fuentes de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/*reseteo de valores*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+/*configuracion de variables principales*/
+:root{
+    --main-color: #0e0e0e;
+    --secondary-color: #bbbbbb;
+    --background: #270505;
+    }
+
+/*barra scroll*/
+
+::-webkit-scrollbar {
+    width: 10px;   
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(27, 27, 27);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background:var(--main-color);
+    border-radius: 5px;
+}
+
+
+/*estilos del body*/
+body{
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+
+/*estilos de titulos*/
+h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+h2{
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+/*ESTILOS DE ESCRITORIO HEADER*/
+.header{
+    background:radial-gradient(circle, #2e0303, #1b0303, #2e0303, #220505, #1b0101);
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    .nav{
+        display:flex;
+        height: 100%;;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 135px;
+        margin-right:100px;
+
+        .navList{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            
+            .itemList{    
+                width: 120px;
+                padding: 10px 0;
+                text-align: center;
+                border: solid 1px;
+                border-radius: 5px;
+
+                a{
+                    text-decoration:none;
+                    color: var(--secondary-color);
+                    font-weight:700; 
+                    font-size: 1rem;
+                }  
+
+                &:hover {
+                    background-color:var(--main-color);
+                    transform: scale(0.9);
+                    box-shadow: 0 0 7px var(--secondary-color);
+                }
+            }
+            
+
+            #join{
+                background-color: var(--secondary-color); 
+                border: solid 1px #6e6c6c;
+
+                a{
+                    color:#580505;
+                }  
+            } 
+
+            &:hover {
+                background-color:var(--background);
+                a{
+                    color:var(--secondary-color);
+                }
+            }
+        }    
+    }
+}
+
+/*ESTILOS HEADER MOBILE */
+
+@media screen and (max-width: 430px) {
+    .header{
+        height: initial;
+        
+        .nav{
+            margin: 0 auto;
+            flex-direction: column;
+            justify-content:left;
+            align-items: center;
+            padding-bottom: 25px;;
+
+            .navList{
+
+                .itemList{
+                    width: 85px;
+                    padding: 3px;
+
+                    a{
+                        font-weight: 400;
+                    }                
+                }
+            }
+        }
+    }
+}
+
+/*ESTILOS HEADER MOBILE Y TABLET*/
+
+@media screen and (min-width: 431px) and (max-width: 902px) {
+
+    .header{
+        height: initial;
+
+        .nav{
+            margin: 0 auto;
+            flex-direction: column;
+            justify-content:left;
+            align-items: center;
+            
+            .navList{
+                
+                .itemList{
+                    width: 100px;
+                    padding: 7px 10px;
+
+                }
+            }
+        }
+    }
+}
+
+
+/*ESTILOS DE ESCRITORIO PAGINA INICIO*/
+.main{ 
+    .bannerTitle{
+        display: flex;
+        background: radial-gradient(circle, #202020ad, #0303038c), url("../assets/img/bannerTit.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 7rem;
+        margin:0 auto;
+        justify-content: center;
+        align-items: center;
+
+        h2{
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+
+    .mainSection{
+        height: 90vh;
+        background: radial-gradient(circle, #0c0c0ce8, #3f3f3f0a), url("../assets/img/bannerInicio.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /*efecto Parallax*/
+        overflow: hidden;
+        align-content: center;
+        text-align:center;
+        
+        .title{
+            margin-top: -5rem;
+        }    
+
+        .subtitle{
+            margin-bottom: 3rem;
+        }
+
+        .buttonReg{   
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            background: var(--background);
+            color: var(--secondary-color);
+            border: 1px solid var(--secondary-color);
+            border-radius: 5px;
+            padding: 15px 25px;
+
+            &:hover {
+                box-shadow: 0 0 7px var(--secondary-color);
+                background: var(--secondary-color);
+                color:#580505;
+                transform:scale(0.90); /*no funciona :C*/
+            }   
+        }    
+    }   
+    
+/*seccion buscar*/
+    .searchSection{
+        background: radial-gradient(circle,  #000000e1, #0e0e0edc), url("../assets/img/darkbg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        height: 70vh;
+        
+        h2{
+            font-size: 2rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .searchBar{
+            display:inline-block;
+            font-size: 1rem;
+            font-weight: 500;
+            background-color: var(--secondary-color);
+            color: var(--main-color);
+            border: 1px solid var(--main-color);
+            border-radius: 5px;
+            padding: 10px; 
+            width: 450px;
+            outline: none;
+            margin-right: 15px;
+
+            &:hover {
+                background-color: grey;;    
+            }
+        }
+
+        .searchBtn{
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 500;
+            background: var(--background);
+            color: var(--secondary-color);
+            border: 1px solid var(--secondary-color);
+            border-radius: 5px;
+            padding: 10px 35px;
+
+            &:hover {
+                transform: scale(0.95);
+                box-shadow: 0 0 7px var(--secondary-color);
+            }
+        }    
+    }
+
+
+/*seccion tendencias*/
+
+    .trendsSection{
+        background: radial-gradient(circle,  #000000e1, #0e0e0edc), url("../assets/img/darkbg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 130px;
+
+        .imageGallery{
+            width:60%;
+            display: flex;
+            margin:0 auto;
+            align-items: center;
+            gap: 35px;
+            flex-wrap: wrap; 
+            justify-content:center;
+            margin-top: 7rem;
+            margin-bottom: 3rem;
+
+            .album{
+                width: 250;
+                height: 250px;
+                min-width: 250px;
+                min-height: 250px;
+                position: relative;
+
+                &:hover{
+                    transform: scale(0.9);
+                }
+                
+                img{
+                    filter:grayscale(55%); 
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 5px;
+                    border: 1px solid rgb(78, 78, 78);
+                }
+
+                .song{
+                    position:absolute;
+                    top:0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: #090909e3;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    transform: scale(0);
+                    transition: .3s ease;
+    
+                    a{
+                        text-decoration: none;
+                        color: var(--secondary-color);
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                    }   
+                }
+
+                &:hover .song{
+                    transform: scale(1.1);
+                    box-shadow: 0 0 5px #9e9e9ec5;
+                }
+            } 
+        }
+        
+        button{
+            font-size: 1.1rem;
+            font-weight: 500;
+            background-color:#1a1a1a;
+            color: var(--secondary-color);
+            border: 1px solid var(--secondary-color);
+            border-radius: 5px;
+            padding: 5px 100px;
+            margin-right: 1.5rem;
+            margin-left: 1.5rem;        
+
+            &:hover {
+                background-color:#1e0303;
+                transform: scale(0.9);
+                box-shadow: 0 0 5px var(--secondary-color);
+            }
+        }   
+    }
+
+/*seccion mejores*/
+
+    .greatestSection{
+        background: radial-gradient(circle,  #000000de, #1d1d1dc9), url("../assets/img/darkbg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        padding-bottom: 110px;
+        margin:0 auto;
+        
+        .greatestGallery{
+            width: 60%;
+            display: flex;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            padding: 110px 0px 50px 0px;
+            margin:0 auto;
+
+            .album{
+                width: 250px;
+                height: 250px;
+                min-width: 250px;
+                min-height: 250px;
+                margin-right: 35px;
+                position:relative;
+                &:hover{
+                    transform: scale(0.9);
+                }
+
+                img{
+                    filter:grayscale(55%);
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 5px;
+                    border: 1px solid rgb(78, 78, 78); 
+                }
+
+                .song{
+                    position:absolute;
+                    top:0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: #090909e3;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    transform: scale(0);
+                    transition: .3s ease;
+
+                    a{
+                    text-decoration: none;
+                    color: var(--secondary-color);
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    }
+                }
+
+                &:hover .song{
+                    transform: scale(1.1);
+                }
+            }    
+        }
+    }
+}
+
+/*ESTILOS PAGINA INICIO MOBILE*/
+
+@media screen and (max-width: 430px) {
+    .main{
+
+        .bannerTitle{
+            background: radial-gradient(circle, #202020ad, #0303038c);
+            h2{
+                font-size: 1.3rem;
+                margin: 0 2px;
+            }
+        }    
+
+        .mainSection{
+            background: radial-gradient(circle, #0c0c0cde, #3f3f3f0a), url("../assets/img/celuBannerInicio.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+
+            .title{
+                font-size: 1.7rem;
+                margin-top: initial;
+            }
+
+            .subtitle{
+                font-size: 1.4rem;
+                margin-bottom: 2rem;
+            }
+            
+            .buttonReg{
+                padding: 10px 15px;
+                font-size: 1rem;
+            }
+        }
+
+        .searchSection{
+            height: 40vh;
+
+            h2{
+                font-size: 1.2rem;
+                margin-bottom: 1.3rem;     
+            }
+
+            .searchBar{
+                font-size: 0.8rem;
+                height: 35px;
+                width: 210px;
+                margin-right: 5px;
+            }
+
+            .searchBtn{
+                height: 35px;
+                padding: 0 15px;
+            }
+        }
+
+        .trendsSection{
+
+            .imageGallery{
+                width:75%;
+                margin-top: 3rem;
+                margin-bottom: 1.5rem;
+                
+                .album{
+                    width: 100%;
+                    height:100%;
+                }
+            }
+
+            button{
+                margin-top: 1.5rem;
+                padding: 5px 35px;
+                margin-right:  0.5rem;
+                margin-left: 0.5rem;
+            }
+        }
+    
+        .greatestSection{
+            width:100%;
+            padding-top: 0px;
+            padding-bottom: 70px;
+                
+            .greatestGallery{   
+                width: 85%;
+                padding-top:60px;
+
+                .album{
+                    margin-right: 10px;
+
+                }
+            }
+        }
+    }   
+}
+
+/*ESTILOS PAGINA INICIO MOBILE*/
+
+@media screen and (min-width: 431px) and (max-width: 575px) {
+    .main{
+
+        .bannerTitle{
+            h2{
+                font-size: 1.7rem;
+                margin: 0 60px;
+            }
+        }    
+
+        .mainSection{
+            background: radial-gradient(circle, #0c0c0cde, #3f3f3f0a), url("../assets/img/celuBannerInicio.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+
+            .title{
+                font-size: 2.3rem;
+                margin-top: initial;
+            }
+
+            .subtitle{
+                font-size: 1.9rem;
+                margin-bottom: 2rem;
+            }
+            
+            .buttonReg{
+                padding: 10px 15px;
+                font-size: 1.2rem;
+            }
+        }
+
+        .searchSection{
+            height: 45vh;
+
+            h2{
+                font-size: 1.5rem;
+                margin-bottom: 1.3rem;     
+            }
+
+            .searchBar{
+                font-size: 0.9rem;
+                height: 37px;
+                width: 300px;
+                margin-right: 10px;
+            }
+
+            .searchBtn{
+                height: 37px;
+                padding: 0 25px;
+            }
+        }
+
+        .trendsSection{
+            
+            .imageGallery{
+                width:75%;
+                margin-top: 3rem;
+                margin-bottom: 1.5rem;
+                
+                .album{
+                    width: 100%;
+                    height:100%;
+                }
+            }
+
+            button{
+                margin-top: 1.5rem;
+                padding: 5px 60px;
+                margin-right:  0.5rem;
+                margin-left: 0.5rem;
+            }
+        }
+            
+        .greatestSection{
+            width:100%;
+            padding-top: 0px;
+            padding-bottom: 70px;
+                
+            .greatestGallery{   
+                width: 75%;
+                padding-top:60px;
+
+                .album{
+                    margin-right: 10px;
+
+                }
+            }
+        }
+    }   
+}
+
+
+/*ESTILOS PAGINA INICIO MOBILE TABLET CH*/
+
+@media screen and (min-width: 576px) and (max-width: 800px) {
+    .main{
+
+        .bannerTitle{
+            h2{
+                font-size: 2rem;
+                margin: 0 5px;
+            }
+        }    
+
+        .mainSection{
+            background: radial-gradient(circle, #0c0c0cde, #3f3f3f0a), url("../assets/img/celuBannerInicio.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 85vh;
+
+            .title{
+                font-size: 3.2rem;
+                margin-top: initial;
+            }
+
+            .subtitle{
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+            }
+            
+            .buttonReg{
+                padding: 10px 15px;
+                font-size: 1.3rem;
+            }
+        }
+
+        .searchSection{
+            height: 50vh;
+
+            h2{
+                font-size: 1.7rem;
+                margin-bottom: 1.3rem;     
+            }
+
+            .searchBar{
+                font-size: 0.9rem;
+                height: 40px;
+                width: 350px;
+                margin-right: 10px;
+            }
+
+            .searchBtn{
+                height: 40px;
+                padding: 0 25px;
+            }
+        }
+
+        .trendsSection{
+            width: 100%;
+            
+            .imageGallery{
+                width:100%;
+                margin-top: 3rem;
+                margin-bottom: 1.5rem;
+                justify-content: center;
+
+            }
+
+            button{
+                margin-top: 1.5rem;
+                padding: 5px 100px;
+                margin-right:  0.5rem;
+                margin-left: 0.5rem;
+            }
+        }
+    
+        .greatestSection{
+
+            .greatestGallery{   
+                width: 85%;
+                padding-top:60px;
+
+                .album{
+                    margin-right: 10px;
+
+                }
+            }
+        }
+    }   
+}
+
+/*estilos inicio 801 hasta 1750px*/
+
+@media screen and (min-width: 801px) and (max-width: 1750px) {
+    .main{
+
+        .trendsSection{
+            width: 100%;
+            
+            .imageGallery{
+                width:70%;
+                margin-top: 3rem;
+                margin-bottom: 1.5rem;
+                justify-content: center;
+
+            }
+        }
+
+        .greatestSection{
+
+            .greatestGallery{   
+                width: 70%;
+                padding-top:60px;
+            }
+        }
+    }   
+}
+
+
+/*ESTILOS FOOTER ESCRITORIO*/
+.footer{
+    background:#090909;
+    height: 15vh;
+
+    p{         
+        font-size: 0.7rem;
+        text-align: center;
+    }    
+
+    .navList{
+        list-style: none;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+        padding-bottom: 30px;
+                    
+        .itemList{    
+            margin-left: 10px;
+            margin-right: 10px;
+                
+            a{
+                text-decoration: none; 
+                color: var(--secondary-color);
+                font-weight:400;
+            }
+
+            .musicManager{
+                background: var(--background);
+                color: var(--secondary-color);
+                padding: 10px 20px;
+                border: 1px solid var(--secondary-color);
+                border-radius: 5px;
+
+                &:hover {
+                    box-shadow: 0 0 7px var(--secondary-color);
+                    background: var(--secondary-color);
+                    color:#700000;
+                }
+            }      
+        }
+    } 
+}
+
+/*ESTILOS FOOTER MOBILE*/
+
+@media screen and (max-width: 430px) {
+    .footer{
+
+        .navList{
+
+            .itemList{
+                margin-left: 5px;
+                margin-right: 5px;
+                
+                a{
+                    font-size: 0.9rem;
+                }
+                .musicManager{
+                    padding: 0.5rem 0.5rem;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+/*ESTILOS FOOTER MOBILE H 575*/
+
+@media screen and (min-width: 431px) and (max-width: 575px) {
+    .footer{
+
+        .navList{
+
+            .itemList{
+                
+                a{
+                    font-size: 1rem;
+                }
+                .musicManager{
+                    padding: 0.5rem 0.9rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+/*ESTILOS ESCRITORIO PAGINA REGISTRARSE*/
+.bodyRL{
+    background: radial-gradient(circle, #3f3f3fe0, #4d4c4c21), url("../assets/img/backregister.jpg");
+    background-size: cover;
+    background-position: center;
+    .headerRL{
+        height: 10vh;
+        padding-left: 135px;
+        padding-top: 7px;
+        }
+
+    .mainRL{
+
+        .rlSection{
+            background: radial-gradient(circle, #000000e1, #0e0e0edc), url("../assets/img/darkbg.jpg");
+            border-radius: 15px;
+            height: 90vh;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            margin:0 auto;
+            align-items: center;
+            justify-content: center;
+            padding: 30 15px;
+
+            .rlTitle{
+                font-size: 2rem;
+                font-weight: 700;
+                text-align: center;
+            }
+
+            hr{
+                margin-bottom: 30px;
+                margin-top: 5px;
+            }
+            
+            .rlForm{
+                width: 70%;
+                padding: 30px;
+
+                input, select{
+                    width:100%;
+                    height: 35px;
+                    font-size: 1rem;
+                    background-color:#c7c7c7;
+                    margin-bottom: 15px;
+                    padding: 0 5px;
+                    border-radius: 5px;
+                    &:hover {
+                        background-color: grey;;    
+                    }
+                }
+
+                    input:focus{
+                        border: 3px solid #3f3f3f;
+                        background: rgb(143, 143, 143);
+                        outline: none;                        
+                    }
+
+                    select:focus{
+                        border: 3px solid #3f3f3f;
+                        background: grey;
+                        outline: none;                 
+                    }
+
+                .terms{
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                    display: flex; 
+                    justify-content: center;
+                    .checkText{
+                        font-size: 1rem;
+                        font-weight: 300;
+                    } 
+                    .check{
+                        margin: 5px;
+                        height: 1rem;
+                        width: 20%;
+                    }                    
+                }
+
+                .buttonRL{
+                    width: 100%;
+                    font-size: 1.3rem;
+                    background: var(--background);
+                    color: var(--secondary-color);
+                    border: 1px solid var(--secondary-color);
+                    border-radius: 5px;
+                    margin: 10px;
+                    margin: 0;
+
+                &:hover {
+                    transform: scale(0.9);
+                    box-shadow: 0 0 7px var(--secondary-color);
+                    background-color: var(--background);
+                }
+
+                }
+                .account{
+                    font-size: 1rem;
+                    text-decoration: none;
+                    font-weight:300;
+                    color: var(--secondary-color);
+                    margin-top:15px;
+                    display:block;
+                    text-align: center;
+
+                    &:hover {
+                        transform: scale(0.9);
+                    }
+
+                }
+            }
+        }   
+    }
+}
+
+
+
+
+/*ESTILOS PAGINA LOGIN ESCRITORIO*/
+
+.fieldLogin{
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 70%;
+    font-weight: 400;
+    
+    div{
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        
+        input{
+        font-size: 1rem;
+        padding:5px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background-color: var(--secondary-color);
+            &:hover {
+                background-color: grey;;    
+            }
+        }
+
+        input:focus{
+            border: 3px solid #3f3f3f;
+            background: rgb(143, 143, 143);
+            outline: none;                        
+        }
+    }
+}
+
+hr{
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+/*ESTILOS MOBILE REGISTRARSE y LOGIN*/
+
+@media (max-width: 650px){
+    .bodyRL{
+
+        .headerRL{
+            padding-left: 15px;
+        }
+
+        .mainRL{
+
+            .rlSection{  
+                height: 80vh;
+                width: 90%;
+                
+                .rlTitle{
+                    font-size: 1.5rem;
+                }
+                
+                hr{
+                    margin-bottom:1rem;
+                }
+                .rlForm{
+                    width: 90%;
+
+                    input, select{
+                    font-size: 0.7rem;
+                    height: 30px;
+                    }
+                        
+                    .terms{
+
+                    .checkText{
+                        font-size: 0.9rem;  
+                    }
+                    
+                    }
+
+                    .buttonRL{
+                        width: 100%;
+                        font-size: 1rem;
+                    }
+
+                    .account{
+                        font-size: 0.9rem;
+
+                    }   
+                }
+            }
+        }
+    }
+}
+
+
+/*ESTILOS MOBILE REGISTRARSE y LOGIN 651 A 950*/
+@media screen and (min-width: 651px) and (max-width: 950px){
+    .bodyRL{
+
+        .headerRL{
+            padding-left: 15px;
+        }
+
+        .mainRL{
+
+            .rlSection{  
+                width: 60%;
+                
+                .rlTitle{
+                    font-size: 2rem;
+                }
+                p{
+                    margin-right: 45px;
+                }
+                
+                .rlForm{
+                    width: 90%;
+                    justify-content:space-evenly;
+
+                    .field{
+
+                        div{
+                            input, select{
+                                font-size: 0.9rem;
+                            }
+                        }
+                    }
+
+                    .terms{
+                        font-size: 1rem;  
+                    }
+
+                    .buttonRL{
+                        width: 100%;
+                        font-size: 1.1rem;
+                    }
+
+                    .account{
+                        font-size: 1rem;
+
+                    }   
+                }
+            }
+        }
+    }
+}
+
+
+/*ESTILOS MOBILE REGISTRARSE y LOGIN 951 A 1300*/
+@media screen and (min-width: 951px) and (max-width: 1300px){
+    .bodyRL{
+
+        .headerRL{
+            padding-left: 15px;
+        }
+
+        .mainRL{
+
+            .rlSection{ 
+                width: 60%;
+                
+                .rlTitle{
+                    font-size: 2rem;
+                }
+                p{
+                    margin-right: 45px;
+                }
+                
+                .rlForm{
+                    width: 85%;
+                    justify-content:space-evenly;
+
+                    .field{
+
+                        div{
+                            input, select{
+                                font-size: 0.9rem;
+                            }
+                        }
+                    }
+
+                    .terms{
+                        font-size: 1rem;  
+                    }
+
+                    .buttonRL{
+                        width: 100%;
+                        font-size: 1.1rem;
+                    }
+
+                    .account{
+                        font-size: 1rem;
+
+                    }   
+                }
+            }
+        }
+    }
+}
+
+
+/*REGISTRARSE MOBILE*/
+@media (max-width: 650px){
+    .bodyRL{
+
+        .mainRL{
+
+            .rlSection{  
+                .rlForm{
+
+                    .account{
+                        font-size: 0.7rem;
+
+                    }    
+                }   
+            }
+        }
+    }
+    
+}
+
+
+/*ESTILOS PAGINA DETALLE ESCRITORIO*/
+
+.mainDet{
+    height: 75vh;
+    display:flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+
+    .songSection{
+        background: radial-gradient(circle, #141414e1, rgb(29, 29, 29)), url("../assets/img/darkbg.jpg");   
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        padding: 15px 15px;
+        border-radius: 5px;
+
+        .detImage{
+            display:flex;
+            overflow:hidden;
+            height: 100%;
+
+            img{
+                width: 300px;
+                height: 300 px;
+                object-fit: contain;
+            }
+
+            iframe{
+                border-radius: 5px;
+            }
+
+            .text-box{
+                margin: 0 auto;
+                align-content: center;
+                text-align: center;
+                width: 50%;
+                padding: 0 50px;
+
+                h1{
+                    font-size: 2rem;
+                    margin-bottom: 5px;
+                }
+            }
+        }  
+    }       
+}
+
+/*ESTILOS PAGINA DETALLE MOBILE*/
+@media (max-width: 670px){
+    .mainDet{
+        height: initial;
+        .songSection{
+            height: 90%;
+            width: 90%;
+            padding: 5px 5px;
+            
+            .detImage{
+                flex-direction: column;            
+                align-items: center;
+                justify-content:center;
+
+                img{
+                    width: 70%;
+                    height: 70%;
+                    
+                }
+
+                iframe{
+                    width: 90%;
+                }
+
+                .text-box{
+                    width: 90%;
+                    padding: 0 0px;
+                    font-size: 0.8rem;
+
+                    h1{
+                        font-size: 1.1rem;
+                    }
+
+                    h3{
+                        margin-top: 5px;
+                        font-size: 0.8rem;
+                    }
+                }
+            }  
+        }       
+    }
+}
+    
+/*ESTILOS PAGINA DETALLE MOBILE TABLET*/
+@media (min-width: 671px) and (max-width: 1240px){
+    .mainDet{
+
+        .songSection{
+            height: 90%;
+            width: 85%;
+            padding: 5px 5px;
+            
+            .detImage{
+                iframe{
+                    width: 90%;
+
+                }
+
+                .text-box{
+                    width: 60%;
+                    font-size: 0.9rem;
+
+                    h1{
+                        font-size: 1.6rem;
+                    }
+
+                    h3{
+                        font-size: 1.1rem;
+                    }
+                }
+            }  
+        }       
+    }
+}
+    
+
