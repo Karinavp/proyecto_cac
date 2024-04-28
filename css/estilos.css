@@ -171,7 +171,7 @@ h2{
 .main{ 
     .bannerTitle{
         display: flex;
-        background: radial-gradient(circle, #202020ad, #0303038c), url("../assets/img/bannertit.jpg");
+        background: radial-gradient(circle, #202020ad, #0303038c), url("../assets/img/bannertitulo.jpg");
         background-size: cover;
         background-position: center;
         height: 7rem;
@@ -187,7 +187,7 @@ h2{
 
     .mainSection{
         height: 90vh;
-        background: radial-gradient(circle, #0c0c0ce8, #3f3f3f0a), url("../assets/img/bannerinicio.jpg");
+        background: radial-gradient(circle, #0c0c0ce8, #3f3f3f0a), url("../assets/img/bannerpaginicio.jpg");
         background-size: cover;
         background-position: center;
         background-attachment: fixed; /*efecto Parallax*/
@@ -224,7 +224,7 @@ h2{
     
 /*seccion buscar*/
     .searchSection{
-        background: radial-gradient(circle,  #000000e1, #0e0e0edc), url("../assets/img/darkbg.jpg");
+        background: radial-gradient(circle,  #000000e1, #0e0e0edc), url("../assets/img/darkbackg.jpg");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -367,7 +367,7 @@ h2{
 /*seccion mejores*/
 
     .greatestSection{
-        background: radial-gradient(circle,  #000000de, #1d1d1dc9), url("../assets/img/darkbg.jpg");
+        background: radial-gradient(circle,  #000000de, #1d1d1dc9), url("../assets/img/darkbackg.jpg");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -445,7 +445,7 @@ h2{
         }    
 
         .mainSection{
-            background: radial-gradient(circle, #0c0c0cde, #3f3f3f0a), url("../assets/img/celubannerinicio.jpg");
+            background: radial-gradient(circle, #0c0c0cde, #3f3f3f0a), url("../assets/img/celubannerpaginicio.jpg");
             background-size: cover;
             background-position: center;
             height: 50vh;
@@ -539,7 +539,7 @@ h2{
         }    
 
         .mainSection{
-            background: radial-gradient(circle, #0c0c0cde, #3f3f3f0a), url("../assets/img/celubannerinicio.jpg");
+            background: radial-gradient(circle, #0c0c0cde, #3f3f3f0a), url("../assets/img/celubannerpaginicio.jpg");
             background-size: cover;
             background-position: center;
             height: 70vh;
@@ -634,7 +634,7 @@ h2{
         }    
 
         .mainSection{
-            background: radial-gradient(circle, #0c0c0cde, #3f3f3f0a), url("../assets/img/celubannerinicio.jpg");
+            background: radial-gradient(circle, #0c0c0cde, #3f3f3f0a), url("../assets/img/celubannerpaginicio.jpg");
             background-size: cover;
             background-position: center;
             height: 85vh;
@@ -830,7 +830,7 @@ h2{
 
 /*ESTILOS ESCRITORIO PAGINA REGISTRARSE*/
 .bodyRL{
-    background: radial-gradient(circle, #3f3f3fe0, #4d4c4c21), url("../assets/img/backregister.jpg");
+    background: radial-gradient(circle, #3f3f3fe0, #4d4c4c21), url("../assets/img/backregist.jpg");
     background-size: cover;
     background-position: center;
     .headerRL{
@@ -842,7 +842,7 @@ h2{
     .mainRL{
 
         .rlSection{
-            background: radial-gradient(circle, #000000e1, #0e0e0edc), url("../assets/img/darkbg.jpg");
+            background: radial-gradient(circle, #000000e1, #0e0e0edc), url("../assets/img/darkbackg.jpg");
             border-radius: 15px;
             height: 90vh;
             width: 40%;
@@ -1178,7 +1178,7 @@ hr{
     align-items: center;
 
     .songSection{
-        background: radial-gradient(circle, #141414e1, rgb(29, 29, 29)), url("../assets/img/darkbg.jpg");   
+        background: radial-gradient(circle, #141414e1, rgb(29, 29, 29)), url("../assets/img/darkbackg.jpg");   
         display:flex;
         flex-direction: column;
         justify-content: center;
